@@ -41,6 +41,7 @@ def find_password():
             email = data[website]["email"]
             password = data[website]["password"]
             messagebox.showinfo(title=website, message=f"Email: {email}\n Password: {password}")
+            pyperclip.copy(data[website]["password'])
         else:
             messagebox.showerror(title="Error", message=f"No Data Found For {website}")
 
